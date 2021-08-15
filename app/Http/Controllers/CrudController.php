@@ -29,9 +29,9 @@ class CrudController extends Controller
         return view('peoples.form');
     }
 
-    public function edit( $username )
+    public function edit( $id )
     {
-        $people = People::where('username', $username) -> first();
+        $people = People::findOrFail($id);
         return view('peoples.form', ['people' => $people]);
     }
 
@@ -48,21 +48,21 @@ class CrudController extends Controller
         return Redirect::to('/peoples');
     }
     
-    public function update( $username, Request $request )
+    public function update( $id, Request $request )
     {
         $request -> validate([
            'first_name' => 'required',
             'last_name' => 'required',
         ]);
 
-        $people = People::where('username', '=', $username);
+        $people = People::findOrFail($id);
         $people->update( $request->except(['_token']) );
         return Redirect::to('/peoples');
     }
 
-    public function delete( $username )
+    public function delete( $id )
     {
-        $people = People::where('username', '=', $username);
+        $people = People::findOrFail($id);
         $people->delete();
         return Redirect::to('/peoples');
     }

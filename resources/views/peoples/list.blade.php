@@ -28,18 +28,18 @@
                 </tr>
               </thead>
               <tbody>
-                @foreach( $peoples as $u )
+                @foreach( $peoples as $p )
                 <tr>
-                    <td>{{ $u->username}}</td>
-                    <td>{{ $u->first_name}}</td>
-                    <td>{{ $u->last_name }}</td>
+                    <td>{{ $p->username}}</td>
+                    <td>{{ $p->first_name}}</td>
+                    <td>{{ $p->last_name }}</td>
                     <td>
-                        <a href="people/{{ $u->username }}/edit">
+                        <a href="people/{{ $p->id }}/edit">
                             <button class="btn btn-secondary"> <i class="fas fa-edit text-light"></i></button>
                         </a>
                     </td>
                     <td>
-                        <form action="people/delete/{{ $u->username }}" method="post">
+                        <form action="people/delete/{{ $p->id }}" method="post">
                             @csrf
                             @method('delete')
                             <button class="btn btn-danger"> <i class="fas fa-trash-alt text-light"></i></button>

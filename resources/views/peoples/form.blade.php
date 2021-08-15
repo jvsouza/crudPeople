@@ -12,7 +12,7 @@
 
             @if( Request::is('*/edit'))
 	            <div class="h1 text-center pb-4">Edit</div>
-				<form action="{{ url('people/update') }}/{{ $people->username }}" method="post">
+				<form action="{{ url('people/update') }}/{{ $people->id }}" method="post">
 					@csrf
 
 	                <div class="form-group">
