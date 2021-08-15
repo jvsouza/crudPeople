@@ -1,12 +1,11 @@
 # Inoa Challenge
 
 Objetivo geral:
-- CRUD :: Create, Read, Upload and Delete
+- CRUD :: Create, Read, Upload and Delete.
 
 Tarefas específicas:
 - Campos: username, nome e sobre nome;
 - username como chave primária.
-
 
 ## Estrutura de pastas e arquivos
 ```text
