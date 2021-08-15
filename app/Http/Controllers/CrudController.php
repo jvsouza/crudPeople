@@ -38,7 +38,7 @@ class CrudController extends Controller
     public function add( Request $request )
     {
         $request -> validate([
-             'username' => 'required|unique:People',
+             'username' => 'required|unique:people',
            'first_name' => 'required',
             'last_name' => 'required',
         ]);
