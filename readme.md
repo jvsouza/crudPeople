@@ -19,12 +19,11 @@ crudPeople
 ├── .env
 ├── .gitignore
 ├── .htaccess
-├── manage.py
+├── artisan
 ├── Procfile
 ├── README.md
 ├── requirements.txt
 └── webpack.mix.js
-
 
 ```
 
@@ -35,7 +34,6 @@ crudPeople
 
 ## Instalação;
 1. [Clonar](https://github.com/jvsouza/crudpeople.git) | [baixar](https://github.com/jvsouza/crudpeople/master.zip) o repositório;
-
 2. Atualizar o banco de dados;
 	```sh
 	$ php artisan migrate
